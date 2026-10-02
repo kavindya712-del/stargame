@@ -186,5 +186,34 @@ body::before {
         width: 90%;
         max-width: 330px;
     }
+/* Support Button */
+
+.support-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    color: white;
+    text-decoration: none;
+
+    background: linear-gradient(90deg, #ff4d6d, #ff8a3d);
+
+    box-shadow:
+        0 0 15px rgba(255, 90, 100, 0.5);
+
+    transition: 0.2s ease;
+}
+
+.support-button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 30px rgba(255, 100, 100, 0.8);
+
 }
 ```
