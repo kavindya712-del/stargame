@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     color: white;
     text-align: center;
+    overflow-x: hidden;
 
     background:
         radial-gradient(circle at 15% 20%, rgba(70, 90, 255, 0.35), transparent 30%),
@@ -19,10 +20,38 @@ body {
     padding-bottom: 60px;
 }
 
+/* Stars */
+
+body::before {
+    content: "✦  ·  ✧     ·     ✦       ·  ✧    ·      ✦     ·   ✧";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    letter-spacing: 35px;
+    line-height: 80px;
+    opacity: 0.35;
+    pointer-events: none;
+    animation: stars 8s linear infinite;
+}
+
+@keyframes stars {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(80px);
+    }
+}
+
 /* Header */
 
 .hero {
-    padding: 70px 20px 50px;
+    position: relative;
+    padding: 80px 20px 55px;
 }
 
 .hero h1 {
@@ -31,7 +60,7 @@ body {
     margin-bottom: 18px;
 
     text-shadow:
-        0 0 10px #ffffff,
+        0 0 10px white,
         0 0 25px #6d7cff,
         0 0 45px #9b4dff;
 }
@@ -41,9 +70,10 @@ body {
     color: #cbd3ff;
 }
 
-/* Games section */
+/* Games */
 
 .games {
+    position: relative;
     max-width: 1000px;
     margin: auto;
     padding: 20px;
@@ -54,7 +84,7 @@ body {
     margin-bottom: 35px;
 }
 
-/* Game card */
+/* Game Card */
 
 .game-card {
     width: 330px;
@@ -84,7 +114,7 @@ body {
         0 0 35px rgba(130, 100, 255, 0.35);
 }
 
-/* Game image */
+/* Image */
 
 .game-card img {
     width: 100%;
@@ -93,7 +123,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Game title */
+/* Title */
 
 .game-card h3 {
     font-size: 28px;
@@ -108,7 +138,7 @@ body {
     margin-bottom: 22px;
 }
 
-/* Play button */
+/* Play Button */
 
 .game-card button {
     border: none;
